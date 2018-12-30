@@ -17,6 +17,7 @@ namespace Northwind.Domain.ValueObjects
 
             try
             {
+                // Split the Domain and Name from accont string 
                 var index = accountString.IndexOf("\\", StringComparison.Ordinal);
                 account.Domain = accountString.Substring(0, index);
                 account.Name = accountString.Substring(index + 1);
